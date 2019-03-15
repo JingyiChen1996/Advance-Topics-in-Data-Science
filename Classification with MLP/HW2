@@ -1,29 +1,25 @@
-<div class="theme"> Overview </div> 
+Galaxy Zoo
+For this homework you will work with real astronomical data with the purpose of classifying galaxies based on visual attributes as they appear in astronomical surveys of the night sky, such as color and morphology. Galaxy morphology is strongly correlated with many physical parameters of those astronomical bodies, including their mass, density distribution, temperature, and star formation history. In turn, these parameters can be estimated using observations of the attributes mentioned above.
 
-### Galaxy Zoo
-For this homework you will work with real astronomical data with the purpose of classifying galaxies based on visual attributes as they appear in astronomical surveys of the night sky, such as color and morphology. Galaxy morphology is strongly correlated with many physical parameters of those astronomical bodies, including their mass, density distribution, temperature, and star formation history. In turn, these parameters can be estimated using observations of the attributes mentioned above. 
+The Galaxy Zoo project includes collected morphological attributes of nearly 900,000 galaxies drawn from the Sloan Digital Sky Survey. The annotation was provided by hundreds of thousands of volunteers, or 'citizen scientists' as we call them, who voted on the galaxy type based only on its image (for more details on galaxy morphology and classification see Chris Lintott et al.).
 
-The Galaxy Zoo project includes collected morphological attributes of nearly 900,000 galaxies drawn from the [Sloan Digital Sky Survey](http://skyserver.sdss.org/dr15/en/home.aspx). The annotation was provided by hundreds of thousands of volunteers, or 'citizen scientists' as we call them, who voted on the galaxy type based only on its image (for more details on galaxy morphology and classification see <a href="https://academic.oup.com/mnras/article/410/1/166/1032478">Chris Lintott et al.</a>). 
+Your task is to train a binary classifier on the Galaxy Zoo data in order to distinguish an elliptical galaxy from spirals, mergers and unknown, which we will call non-elliptical galaxies, based on its visual morphology.
 
-Your task is to train a binary classifier on the Galaxy Zoo data in order to distinguish an elliptical galaxy from spirals, mergers and unknown, which we will call non-elliptical galaxies, based on its visual morphology.  
+We provide a subset of data in galaxy_morphology_labeled.csv so there is no need for you to download it. The full dataset is available at http://data.galaxyzoo.org.
 
-We provide a subset of data in `galaxy_morphology_labeled.csv` so there is no need for you to download it. The full dataset is available at http://data.galaxyzoo.org.
+Dataset Attributes:
 
-
-<span class='sub-q'> Dataset Attributes:</span>
-- **green_color**: the amount of light measured in the green frequency band (wavelength range 464 $\pm$ 128~nm)
-- **red_color**: the amount of light measured in the red frequency band (wavelength range 658 $\pm$ 138~nm)
-- **infrared_color**: the amount of light measured in the infrared frequency band (wavelength range 806 $\pm$ 149~nm)
-- **de_vaucouleurs_fit_axial_ratio**: axial ratio associated with the [de Vaucouleurs fit](https://en.wikipedia.org/wiki/De_Vaucouleurs%27_law) to the two-dimensional image of the galaxy
-- **exponential_fit_axial_ratio**: the axial ratio associated with an exponential fit to the two-D image of the galaxy 
-- **exponential_disc_fit_log_likelihood**: log likelihood associated with an exponential fit to the two-D image of the galaxy
-- **de_vaucouleurs_fit_log_likelihood**: log likelihood associated with a de Vaucouleurs fit to the two-D image of the galaxy
-- **star_log_likelihood**: the log likelihood that the object is a point-like source (star) object rather than a galaxy
-- **number_of_votes**: total number of volunteer votes
-- **probability_elliptical**: fraction of votes for elliptical morphology
-- **probability_spiral**: fraction of votes for spiral morphology
-- **probability_unknown**: fraction of votes for unknown morphology
-- **probability_merger**: fraction of votes for merger morphology
-- **class**: morphology with the highest fraction of votes
-
-Notice that the volunteers did not have access to any of the attributes but the galaxy shape when voting.
+green_color: the amount of light measured in the green frequency band (wavelength range 464  ±±  128~nm)
+red_color: the amount of light measured in the red frequency band (wavelength range 658  ±±  138~nm)
+infrared_color: the amount of light measured in the infrared frequency band (wavelength range 806  ±±  149~nm)
+de_vaucouleurs_fit_axial_ratio: axial ratio associated with the de Vaucouleurs fit to the two-dimensional image of the galaxy
+exponential_fit_axial_ratio: the axial ratio associated with an exponential fit to the two-D image of the galaxy
+exponential_disc_fit_log_likelihood: log likelihood associated with an exponential fit to the two-D image of the galaxy
+de_vaucouleurs_fit_log_likelihood: log likelihood associated with a de Vaucouleurs fit to the two-D image of the galaxy
+star_log_likelihood: the log likelihood that the object is a point-like source (star) object rather than a galaxy
+number_of_votes: total number of volunteer votes
+probability_elliptical: fraction of votes for elliptical morphology
+probability_spiral: fraction of votes for spiral morphology
+probability_unknown: fraction of votes for unknown morphology
+probability_merger: fraction of votes for merger morphology
+class: morphology with the highest fraction of votes
