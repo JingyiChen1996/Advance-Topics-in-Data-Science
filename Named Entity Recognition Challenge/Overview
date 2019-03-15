@@ -1,0 +1,3 @@
+Named entity recognition (NER) seeks to locate and classify named entities present in unstructured text into predefined categories such as organizations, locations, expressions of times, names of persons, etc. This technique is often used in real use cases such as classifying content for news providers, efficient search algorithms over large corpora and content-based recommendation systems.
+
+This represents an interesting "many-to-many" problem, allowing us to experiment with recurrent architectures and compare their performances against other models.
